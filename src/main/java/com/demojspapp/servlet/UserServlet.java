@@ -57,6 +57,7 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        users.add(new User(1, "First"));
         // Update an existing user
         String pathInfo = request.getPathInfo();
         if (pathInfo == null || pathInfo.equals("/")) {
